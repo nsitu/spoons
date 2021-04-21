@@ -5,10 +5,11 @@ const getSpoons = (query) => {
     .then(response => response.json())
     .then( async spoons => { 
 
-         await Promise.all( spoons.results.map( render ) )
+        document.getElementById("spoons").innerHTML = ''; // clear out any previous content 
+        
+        await Promise.all( spoons.results.map( render ) )
 
         // After rendering is finished, add spoon profiles to the page
-        document.getElementById("spoons").innerHTML = ''; // clear out any previous content 
         spoons.results.forEach( spoon => {
           document.getElementById("spoons").innerHTML += spoon.html 
         })
