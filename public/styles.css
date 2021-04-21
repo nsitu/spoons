@@ -1,0 +1,16 @@
+body,
+html {
+	font-family: 'Lato', sans-serif;
+  	color: #eeeeee;
+	margin: 0;
+	padding: 0;
+	background: rgb(146, 21, 73);
+    text-align: center;
+}
+
+section{
+    margin: 0 10vw;
+}
+footer a{
+    color: #eeeeee;
+}

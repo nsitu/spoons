@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spoons</title>
+
+	<!--  https://fonts.google.com/specimen/Lato -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+
+	<!--https://material.io/develop/web/getting-started-->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<link rel="stylesheet" href="styles.css">
+
+	<!-- Note: this script is deferred until the page is loaded.  -->
+	<script src="spoons.js" defer></script>
+
+</head>
+<body>
+<header id="header">
+  <h1>Spoons</h1>
+  <button class="mdc-button mdc-button--raised dietButton" onclick="getSpoons('Gluten Free')">
+    <div class="mdc-button__ripple"></div>
+    <span class="mdc-button__label">Gluten Free</span>
+  </button>
+  <button class="mdc-button mdc-button--raised dietButton" onclick="getSpoons('Keto')">
+    <div class="mdc-button__ripple"></div>
+    <span class="mdc-button__label">Keto</span>
+  </button>
+</header>
+<section id="spoons">
+</section>
+<footer id="footer">
+  <p>Thanks to <a target="_blank" href="https://spoonacular.com">Spoonacular</a> for the spoons. </p>
+</footer>
+<script>
+    mdc.ripple.MDCRipple.attachTo(document.querySelector('.dietButton'));
+</script>
+</body>
